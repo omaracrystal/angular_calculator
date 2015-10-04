@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+  <title>Calculator Lab</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div id="calculator" ng-controller='MainController'>
+
+
+    <div id="screen-container">
+
+      <div id="screen"> {{screenValue.join(' ')}} </div>
+    </div>
+
+    <div id="button-container">
+      <div class="buttons">
+        <span class="operator" id="cancel" ng-click='clear()'>C</span>
+        <span class="operator" ng-click='operator("/")'>/</span>
+        <span class="operator" ng-click='operator("x")'>x</span>
+        <span ng-click='integer("7")'>7</span>
+        <span ng-click='integer("8")'>8</span>
+        <span ng-click='integer("9")'>9</span>
+        <span class="operator" ng-click='operator("-")'>-</span>
+        <span ng-click='integer("4")'>4</span>
+        <span ng-click='integer("5")'>5</span>
+        <span ng-click='integer("6")'>6</span>
+        <span class="operator" ng-click='operator("+")'>+</span>
+        <span ng-click='integer("1")'>1</span>
+        <span ng-click='integer("2")'>2</span>
+        <span ng-click='integer("3")'>3</span>
+        <span class="operator" id="calc" ng-click='calculate(screenValue)'>=</span>
+        <div class="l-row">
+          <span id="zero" ng-click='integer("0")'>0</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js'></script>
+  <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/angular.js" type="text/javascript"></script>
+
+</body>
+</html>
